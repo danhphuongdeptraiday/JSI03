@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ES6</h1>
+
+    <script>
+      //   let myFunction = function (x, y) {
+      //     return x + y;
+      //   };
+
+      // function myFunction(x, y) {
+      //     return x + y
+      // }
+
+      // ES6:
+      // Arrow Function:
+      let myFunction = (x, y) => x + y;
+      //   console.log(myFunction(10, 20));
+
+      //  spread operator(...) Array
+      const q1 = ["Jan", "Feb", "Mar"];
+      const q2 = ["Apr", "May", "Jun"];
+      const q3 = ["Jul", "Aug", "Sep"];
+      const q4 = ["Oct", "Nov", "May"];
+
+      let myNewArray = [q1, ...q2, ...q3, ...q4];
+      //   console.log(myNewArray);
+
+      // Ví dụ của spread
+      const numbers = [23, 55, 21, 87, 56];
+      let maxValue = Math.max(...numbers);
+      //   console.log(maxValue);
+
+      // for/in for/of
+      const cars = ["BMW", "Volvo", "Mini"];
+
+      //   for (let i = 0; i < cars.length; i++) {
+      //     console.log(cars[i]);
+      //   }
+
+      //   for (let i of cars) {
+      //     console.log(i);
+      //   }
+
+      //   for (let i in cars) {
+      //     console.log(i);
+      //   }
+
+      //   let subject = "JavaScript";
+      //   for (let i of subject) {
+      //     console.log(i);
+      //   }
+
+      const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+
+      console.log();
+    </script>
+  </body>
+</html>
