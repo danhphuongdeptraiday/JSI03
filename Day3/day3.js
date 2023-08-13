@@ -26,6 +26,7 @@ function renderItem(arrayPost) {
   for (let i = 0; i < arrayPost.length; i++) {
     let createNewDiv = document.createElement("div");
     createNewDiv.className = "item";
+    createNewDiv.setAttribute("id_Attribute", i + 1);
     createNewDiv.innerHTML = `
 
     <p id="idItem">${arrayPost[i].id}</p>
@@ -39,3 +40,20 @@ function renderItem(arrayPost) {
     container.appendChild(createNewDiv);
   }
 }
+
+// xử lý choose item
+let select = document.querySelector("select");
+let chooseItem = document.getElementById("chooseItem");
+let getFullItemElement = document.getElementsByClassName("item");
+let tempChooseElement = "";
+chooseItem.addEventListener("click", function () {
+  for (let i = 0; i < getFullItemElement.length; i++) {
+    if (select.value == getFullItemElement[i].getAttribute("id_Attribute")) {
+      tempChooseElement = i;
+      if (select.value != tempChooseElement) {
+        getFullItemElement[tempChooseElement].style.backgroundColor = "white";
+      }
+      getFullItemElement[i].style.backgroundColor = "red";
+    }
+  }
+});
